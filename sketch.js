@@ -43,10 +43,10 @@ function setup() {
 }
 
 function draw() {
-   // welcomePage();
-    //if (makeProfile >= 1) {
+    welcomePage();
+    if (makeProfile >= 1) {
         wahoo();
-    //}
+    }
 }
 
 function welcomePage() {
