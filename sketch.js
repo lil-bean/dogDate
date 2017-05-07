@@ -45,7 +45,7 @@ function setup() {
 function draw() {
     welcomePage();
     if (makeProfile >= 1) {
-        wahoo();
+        editProfile();
     }
 }
 
@@ -64,7 +64,7 @@ function welcomePage() {
     }
 }
 
-function wahoo() {
+function editProfile() {
     animation(profilePage, 400, 400);
     fill(170);
     noStroke();
