@@ -17,9 +17,9 @@ var picH;
 var startPage;
 //background for profile page
 var profilePage;
-//images for corgi
+//*images for corgi*\\
 var corgi1, corgi2, corgi3, corgi4;
-//images for ibizan
+//*images for ibizan*\\
 //brown
 var iEar1B, iEar2B, iEar3B, iEar4B;
 //grey
@@ -28,6 +28,17 @@ var iEar1G, iEar2G, iEar3G, iEar4G;
 var iEar1M, iEar2M, iEar3M, iEar4M;
 //white
 var iEar1W, iEar2W, iEar3W, iEar4W;
+//*images for shepherd*\\
+//brown
+var sEye1B, sEye2B, sEye3B, sEye4B;
+//black
+var sEye1BL, sEye2BL, sEye3BL, sEye4BL;
+//gray
+var sEye1G, sEye2G, sEye3G, sEye4G;
+//white
+var sEye1W, sEye2W, sEye3W, sEye4W;
+//*pug*\\
+var pug1, pug2, pug3, pug4, pug5, pug6, pug7, pug8;
 //status input
 var input, button;
 /////////preload/////////
@@ -41,7 +52,7 @@ function preload() {
     //dog avatar sprites
     //*corgi*\\
     corgi1 = loadAnimation('assets/textures/dogSprites/corgi_1.gif');
-    corgi2 = loadAnimation('assets/textures/dogSprites/corgi_2.gif');
+    //corgi2 = loadAnimation('assets/textures/dogSprites/corgi_2.gif');
     corgi3 = loadAnimation('assets/textures/dogSprites/corgi_3.gif');
     corgi4 = loadAnimation('assets/textures/dogSprites/corgi_4.gif');
     //*ibizan*\\
@@ -66,6 +77,35 @@ function preload() {
     iEar3W = loadAnimation('assets/textures/dogSprites/ibizan_ear3_white.gif');
     iEar4W = loadAnimation('assets/textures/dogSprites/ibizan_ear4_white.gif');
     //*shepherd*\\
+    //brown
+    sEye1B = loadAnimation('assets/textures/dogSprites/shep_eye1B.png');
+    sEye2B = loadAnimation('assets/textures/dogSprites/shep_eye2B.png');
+    sEye3B = loadAnimation('assets/textures/dogSprites/shep_eye3B.png');
+    sEye4B = loadAnimation('assets/textures/dogSprites/shep_eye4B.png');
+    //black
+    sEye1BL = loadAnimation('assets/textures/dogSprites/shep_eye1BL.png');
+    sEye2BL = loadAnimation('assets/textures/dogSprites/shep_eye2BL.png');
+    sEye3BL = loadAnimation('assets/textures/dogSprites/shep_eye3BL.png');
+    sEye4BL = loadAnimation('assets/textures/dogSprites/shep_eye4BL.png');
+    //gray
+    sEye1G = loadAnimation('assets/textures/dogSprites/shep_eye1G.png');
+    sEye2G = loadAnimation('assets/textures/dogSprites/shep_eye2G.png');
+    sEye3G = loadAnimation('assets/textures/dogSprites/shep_eye3G.png');
+    sEye4G = loadAnimation('assets/textures/dogSprites/shep_eye4G.png');
+    //white
+    sEye1W = laodAnimation('assets/textures/dogSprites/shep_eye1W.png');
+    sEye2W = loadAnimation('assets/textures/dogSprites/shep_eye2W.png');
+    sEye3W = loadAnimation('assets/textures/dogSprites/shep_eye3W.png');
+    sEye4W = loadAnimation('assets/textures/dogSprites/shep_eye4W.png');
+    //*pug*\\
+    pug1 = loadAnimation('assets/textures/dogSprites/pug1.png');
+    pug2 = loadAnimation('assets/textures/dogSprites/pug2.png');
+    pug3 = loadAnimation('assets/textures/dogSprites/pug3.png');
+    pug4 = loadAnimation('assets/textures/dogSprites/pug4.png');
+    pug5 = loadAnimation('assets/textures/dogSprites/pug5.png');
+    pug6 = loadAnimation('assets/textures/dogSprites/pug6.png');
+    pug7 = loadAnimation('assets/textures/dogSprites/pug7.png');
+    pug8 = loadAnimation('assets/textures/dogSprites/pug8.png');
 }
 
 function setup() {
