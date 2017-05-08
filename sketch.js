@@ -43,6 +43,8 @@ var pug1, pug2, pug3, pug4, pug5, pug6, pug7, pug8;
 var input, button;
 //dog position
 var dogx, dogy;
+//sets profile image
+var imageSet;
 /////////preload/////////
 function preload() {
     //font
@@ -106,6 +108,8 @@ function setup() {
     makeProfile = 0;
     //counter thata changes profile picture
     makePic = 0;
+    //sets profile image
+    var imageSet = null;
 }
 
 function draw() {
@@ -163,6 +167,9 @@ function choosePic() {
     animation(startPage, 400, 400);
     //corgi\\
     animation(corgi1, dogx, dogy);
+    if(mouseIsPressed && mouseX >= dogx && mouseX <= dogx+100 && mouseY >= dogy && mouseY <= dogy+100){
+        imageSet = animation(corgi1, dogx, dogy);
+    }
     animation(corgi2, dogx+100, dogy);
     animation(corgi3, dogx+200, dogy);
     animation(corgi4, dogx+300, dogy);
