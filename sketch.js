@@ -17,9 +17,9 @@ var picH;
 var startPage;
 //background for profile page
 var profilePage;
-//images for corgi
+//*images for corgi*\\
 var corgi1, corgi2, corgi3, corgi4;
-//images for ibizan
+//*images for ibizan*\\
 //brown
 var iEar1B, iEar2B, iEar3B, iEar4B;
 //grey
@@ -28,8 +28,23 @@ var iEar1G, iEar2G, iEar3G, iEar4G;
 var iEar1M, iEar2M, iEar3M, iEar4M;
 //white
 var iEar1W, iEar2W, iEar3W, iEar4W;
+//*images for shepherd*\\
+//brown
+var sEye1B, sEye2B, sEye3B, sEye4B;
+//black
+var sEye1BL, sEye2BL, sEye3BL, sEye4BL;
+//gray
+var sEye1G, sEye2G, sEye3G, sEye4G;
+//white
+var sEye1W, sEye2W, sEye3W, sEye4W;
+//*pug*\\
+var pug1, pug2, pug3, pug4, pug5, pug6, pug7, pug8;
 //status input
 var input, button;
+//dog position
+var dogx, dogy;
+//sets profile image
+var imageSet;
 /////////preload/////////
 function preload() {
     //font
@@ -46,26 +61,27 @@ function preload() {
     corgi4 = loadAnimation('assets/textures/dogSprites/corgi_4.gif');
     //*ibizan*\\
     //brown
-    iEar1B = loadAnimation('assets/textures/dogSprites/ibizan_ear1_brown.gif');
     iEar2B = loadAnimation('assets/textures/dogSprites/ibizan_ear2_brown.gif');
-    iEar3B = loadAnimation('assets/textures/dogSprites/ibizan_ear3_brown.gif');
-    iEar4B = loadAnimation('assets/textures/dogSprites/ibizan_ear4_brown.gif');
     //grey
-    iEar1G = loadAnimation('assets/textures/dogSprites/ibizan_ear1_grey.gif');
-    iEar2G = loadAnimation('assets/textures/dogSprites/ibizan_ear2_grey.gif');
     iEar3G = loadAnimation('assets/textures/dogSprites/ibizan_ear3_grey.gif');
-    iEar4G = loadAnimation('assets/textures/dogSprites/ibizan_ear4_grey.gif');
     //mustard
-    iEar1M = loadAnimation('assets/textures/dogSprites/ibizan_ear1_mustard.gif');
-    iEar2M = loadAnimation('assets/textures/dogSprites/ibizan_ear2_mustard.gif');
-    iEar3M = loadAnimation('assets/textures/dogSprites/ibizan_ear3_mustard.gif');
     iEar4M = loadAnimation('assets/textures/dogSprites/ibizan_ear4_mustard.gif');
     //white
     iEar1W = loadAnimation('assets/textures/dogSprites/ibizan_ear1_white.gif');
-    iEar2W = loadAnimation('assets/textures/dogSprites/ibizan_ear2_white.gif');
-    iEar3W = loadAnimation('assets/textures/dogSprites/ibizan_ear3_white.gif');
-    iEar4W = loadAnimation('assets/textures/dogSprites/ibizan_ear4_white.gif');
     //*shepherd*\\
+    //brown
+    sEye1B = loadAnimation('assets/textures/dogSprites/shep_eye1B.png');
+    //black
+    sEye1BL = loadAnimation('assets/textures/dogSprites/shep_eye1BL.png');
+    //gray
+    sEye3G = loadAnimation('assets/textures/dogSprites/shep_eye3G.png');
+    //white
+    sEye2W = loadAnimation('assets/textures/dogSprites/shep_eye2W.png');
+    //*pug*\\
+    pug1 = loadImage('assets/textures/dogSprites/pug1.png');
+    pug2 = loadImage('assets/textures/dogSprites/pug2.png');
+    pug6 = loadImage('assets/textures/dogSprites/pug6.png');
+    pug7 = loadImage('assets/textures/dogSprites/pug7.png');
 }
 
 function setup() {
@@ -81,6 +97,9 @@ function setup() {
     picY = 40;
     picL = 270;
     picH = 295;
+    //dog position
+    dogx = 100;
+    dogy = 100;
     //status input
     //input = createInput();
     //input.position(414, 83);
@@ -89,6 +108,8 @@ function setup() {
     makeProfile = 0;
     //counter thata changes profile picture
     makePic = 0;
+    //sets profile image
+    var imageSet = null;
 }
 
 function draw() {
@@ -144,33 +165,27 @@ function editProfile() {
 function choosePic() {
     //background
     animation(startPage, 400, 400);
-    //corgi
-    animation(corgi1, 250, 100);
-    if (mouseIsPressed && mouseX >= 250 && mouseX <= 345 && mouseY >= 100 && mouseY <= 200){
-        createProfile -= 1;
+    //corgi\\
+    animation(corgi1, dogx, dogy);
+    if(mouseIsPressed && mouseX >= dogx && mouseX <= dogx+100 && mouseY >= dogy && mouseY <= dogy+100){
+        imageSet = animation(corgi1, dogx, dogy);
     }
-    animation(corgi2, 350, 100);
-    animation(corgi3, 450, 100);
-    animation(corgi4, 400+150, 100);
-    //ibizan
-    //brown
-    animation(iEar1B, 100+150, 200);
-    animation(iEar2B, 200+150, 200);
-    animation(iEar3B, 300+150, 200);
-    animation(iEar4B, 400+150, 200);
-    //grey
-    animation(iEar1G, 100+150, 325);
-    animation(iEar2G, 200+150, 325);
-    animation(iEar3G, 300+150, 325);
-    animation(iEar4G, 400+150, 325);
-    //mustard
-    animation(iEar1M, 100+150, 450);
-    animation(iEar2M, 200+150, 450);
-    animation(iEar3M, 300+150, 450);
-    animation(iEar4M, 400+150, 450);
-    //white
-    animation(iEar1W, 100+150, 575);
-    animation(iEar2W, 200+150, 575);
-    animation(iEar3W, 300+150, 575);
-    animation(iEar4W, 400+150, 575);
+    animation(corgi2, dogx+100, dogy);
+    animation(corgi3, dogx+200, dogy);
+    animation(corgi4, dogx+300, dogy);
+    //ibizan\\
+    animation(iEar2B, dogx, dogy+100);
+    animation(iEar3G, dogx+100, dogy+100);
+    animation(iEar4M, dogx+200, dogy+100);
+    animation(iEar1W, dogx+300, dogy+100);
+    //shepherd\\
+    animation(sEye1B, dogx, dogy+225);
+    animation(sEye1BL, dogx+100, dogy+225);
+    animation(sEye3G, dogx+200, dogy+225);
+    animation(sEye2W, dogx+300, dogy+225);
+    //pug\\
+    image(pug1, dogx-60, dogy+225, 200, 200);
+    image(pug2, dogx+60, dogy+225, 200, 200);
+    image(pug6, dogx+180, dogy+225, 200, 200);
+    image(pug7, dogx+300, dogy+225, 200, 200);
 }
