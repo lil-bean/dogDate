@@ -76,10 +76,10 @@ function preload() {
     //white
     sEye2W = loadAnimation('assets/textures/dogSprites/shep_eye2W.png');
     //*pug*\\
-    pug1 = loadAnimation('assets/textures/dogSprites/pug1.png');
-    pug2 = loadAnimation('assets/textures/dogSprites/pug2.png');
-    pug6 = loadAnimation('assets/textures/dogSprites/pug6.png');
-    pug7 = loadAnimation('assets/textures/dogSprites/pug7.png');
+    pug1 = loadImage('assets/textures/dogSprites/pug1.png');
+    pug2 = loadImage('assets/textures/dogSprites/pug2.png');
+    pug6 = loadImage('assets/textures/dogSprites/pug6.png');
+    pug7 = loadImage('assets/textures/dogSprites/pug7.png');
 }
 
 function setup() {
@@ -168,4 +168,17 @@ function choosePic() {
     animation(corgi4, dogx+300, dogy);
     //ibizan\\
     animation(iEar2B, dogx, dogy+100);
+    animation(iEar3G, dogx+100, dogy+100);
+    animation(iEar4M, dogx+200, dogy+100);
+    animation(iEar1W, dogx+300, dogy+100);
+    //shepherd\\
+    animation(sEye1B, dogx, dogy+225);
+    animation(sEye1BL, dogx+100, dogy+225);
+    animation(sEye3G, dogx+200, dogy+225);
+    animation(sEye2W, dogx+300, dogy+225);
+    //pug\\
+    image(pug1, dogx-60, dogy+225, 200, 200);
+    image(pug2, dogx+60, dogy+225, 200, 200);
+    image(pug6, dogx+180, dogy+225, 200, 200);
+    image(pug7, dogx+300, dogy+225, 200, 200);
 }
