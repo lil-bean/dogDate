@@ -39,12 +39,12 @@ function preload() {
     //profile page
     profilePage = loadAnimation('assets/textures/webPage/profilePage.png');
     //dog avatar sprites
-    //corgi
+    //*corgi*\\
     corgi1 = loadAnimation('assets/textures/dogSprites/corgi_1.gif');
     corgi2 = loadAnimation('assets/textures/dogSprites/corgi_2.gif');
     corgi3 = loadAnimation('assets/textures/dogSprites/corgi_3.gif');
     corgi4 = loadAnimation('assets/textures/dogSprites/corgi_4.gif');
-    //ibizan
+    //*ibizan*\\
     //brown
     iEar1B = loadAnimation('assets/textures/dogSprites/ibizan_ear1_brown.gif');
     iEar2B = loadAnimation('assets/textures/dogSprites/ibizan_ear2_brown.gif');
@@ -65,6 +65,7 @@ function preload() {
     iEar2W = loadAnimation('assets/textures/dogSprites/ibizan_ear2_white.gif');
     iEar3W = loadAnimation('assets/textures/dogSprites/ibizan_ear3_white.gif');
     iEar4W = loadAnimation('assets/textures/dogSprites/ibizan_ear4_white.gif');
+    //*shepherd*\\
 }
 
 function setup() {
