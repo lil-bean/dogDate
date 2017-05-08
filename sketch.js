@@ -160,6 +160,8 @@ function editProfile() {
     text('write about yourself', 550, 55);
     text('likes', 65, 430);
     text('dislkes', 75, 630);
+    //a corgi
+    imageSet;
 }
 
 function choosePic() {
