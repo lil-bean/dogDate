@@ -209,28 +209,28 @@ function choosePic() {
         imageSet = animation(sEye1BL, dogx+100, dogy+100);
     }
     animation(sEye3G, dogx+200, dogy+225);
-    if(mouseIsPressed && mouseX >= dogx+200 && mouseX <= dogx+300 && mouseY >= dogy+200 mouseY <= dogy+300){
+    if(mouseIsPressed && mouseX >= dogx+200 && mouseX <= dogx+300 && mouseY >= dogy+200 && mouseY <= dogy+300){
         imageSet = animation(sEye3G, dogx+100, dogy+100);
     }
     animation(sEye2W, dogx+300, dogy+225);
-    if(mouseIsPressed && mouseX >= dogx+300 mouseX <= dogx+400 && mouseY >= dogy+200 && mouseY <= dogy+300){
+    if(mouseIsPressed && mouseX >= dogx+300 && mouseX <= dogx+400 && mouseY >= dogy+200 && mouseY <= dogy+300){
         imageSet = animation(sEye2W, dogx+100, dogy+100);
     }
     //pug\\
     image(pug1, dogx-60, dogy+225, 200, 200);
     if(mouseIsPressed && mouseX >= dogx && mouseX <= dogx+100 && mouseY >= dogy+300 && mouseY <= dogy+400){
-        imageSet = animation(pug1, dogx+100, dogy+100);
+        imageSet = image(pug1, dogx+100, dogy+100);
     }
     image(pug2, dogx+60, dogy+225, 200, 200);
     if(mouseIsPressed && mouseX >= dogx+100 && mouseX <= dogx+200 && mouseY >= dogy+300 && mouseY <= dogy+400){
-        imageSet = animation(pug2, dogx+100, dogy+100);
+        imageSet = image(pug2, dogx+100, dogy+100);
     }
     image(pug6, dogx+180, dogy+225, 200, 200);
     if(mouseIsPressed && mouseX >= dogx+200 && mouseX <= dogx+300 && mouseY >= dogy+300 && mouseY <= dogy+400){
-        imageSet = animation(pug6, dogx+100, dogy+100);
+        imageSet = image(pug6, dogx+100, dogy+100);
     }
     image(pug7, dogx+300, dogy+225, 200, 200);
     if(mouseIsPressed && mouseX >= dogx+300 && mouseX <= dogx+400 && mouseY >= dogy+300 && mouseY <= dogy+400){
-        imageSet = animation(pug7, dogx+100, dogy+100);
+        imageSet = image(pug7, dogx+100, dogy+100);
     }
 }
