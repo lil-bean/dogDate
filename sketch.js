@@ -43,6 +43,8 @@ var pug1, pug2, pug3, pug4, pug5, pug6, pug7, pug8;
 var input, button;
 //dog position
 var dogx, dogy;
+//initializes the image change
+var imageChange;
 //sets profile image
 var imageSet;
 /////////preload/////////
@@ -108,17 +110,22 @@ function setup() {
     makeProfile = 0;
     //counter thata changes profile picture
     makePic = 0;
+    //initializes the image change
+    imageChange = 0;
     //sets profile image
-    var imageSet = null;
+    imageSet = null;
 }
 
 function draw() {
     welcomePage();
-    if (makeProfile >= 1 && makePic == 0) {
+    if (makeProfile >= 1) {
         editProfile();
     }
     if (makePic >= 1) {
-    choosePic();
+        choosePic();
+    }
+    if (imageChange >= 1) {
+        editProfile();
     }
 }
 
@@ -160,6 +167,7 @@ function editProfile() {
     text('write about yourself', 550, 55);
     text('likes', 65, 430);
     text('dislkes', 75, 630);
+    imageSet;
 }
 
 function choosePic() {
@@ -167,70 +175,71 @@ function choosePic() {
     animation(startPage, 400, 400);
     //corgi\\
     animation(corgi1, dogx, dogy);
-    if(mouseIsPressed && mouseX >= dogx && mouseX <= dogx+100 && mouseY >= dogy && mouseY <= dogy+100){
-        imageSet = animation(corgi1, dogx+100, dogy+100);
+    if (mouseIsPressed && mouseX >= dogx && mouseX <= dogx + 100 && mouseY >= dogy && mouseY <= dogy + 100) {
+        imageSet = animation(corgi1, dogx + 100, dogy + 100);
     }
-    animation(corgi2, dogx+100, dogy);
-    if(mouseIsPressed && mouseX >= dogx+100 && mouseX <= dogx+200 && mouseY >= dogy && mouseY <= dogy+100){
-        imageSet = animation(corgi2, dogx+100, dogy+100);
+    animation(corgi2, dogx + 100, dogy);
+    if (mouseIsPressed && mouseX >= dogx + 100 && mouseX <= dogx + 200 && mouseY >= dogy && mouseY <= dogy + 100) {
+        imageSet = animation(corgi2, dogx + 100, dogy + 100);
     }
-    animation(corgi3, dogx+200, dogy);
-    if(mouseIsPressed && mouseX >= dogx+200 && mouseX <= dogx+300 && mouseY >= dogy && mouseY <= dogy+100){
-        imageSet = animation(corgi3, dogx+100, dogy+100);
+    animation(corgi3, dogx + 200, dogy);
+    if (mouseIsPressed && mouseX >= dogx + 200 && mouseX <= dogx + 300 && mouseY >= dogy && mouseY <= dogy + 100) {
+        imageSet = animation(corgi3, dogx + 100, dogy + 100);
     }
-    animation(corgi4, dogx+300, dogy);
-    if(mouseIsPressed && mouseX >= dogx+300 && mouseX <= dogx+400 && mouseY >= dogy && mouseY <= dogy+100){
-        imageSet = animation(corgi4, dogx+100, dogy+100);
+    animation(corgi4, dogx + 300, dogy);
+    if (mouseIsPressed && mouseX >= dogx + 300 && mouseX <= dogx + 400 && mouseY >= dogy && mouseY <= dogy + 100) {
+        imageSet = animation(corgi4, dogx + 100, dogy + 100);
     }
     //ibizan\\
-    animation(iEar2B, dogx, dogy+100);
-    if(mouseIsPressed && mouseX >= dogx && mouseX <= dogx+100 && mouseY >= dogy+100 && mouseY <= dogy+200){
-        imageSet = animation(iEar2B, dogx+100, dogy+100);
+    animation(iEar2B, dogx, dogy + 100);
+    if (mouseIsPressed && mouseX >= dogx && mouseX <= dogx + 100 && mouseY >= dogy + 100 && mouseY <= dogy + 200) {
+        imageSet = animation(iEar2B, dogx + 100, dogy + 100);
     }
-    animation(iEar3G, dogx+100, dogy+100);
-    if(mouseIsPressed && mouseX >= dogx+100 && mouseX <= dogx+200 && mouseY >= dogy+100 && mouseY <= dogy+200){
-        imageSet = animation(iEar3G, dogx+100, dogy+100);
+    animation(iEar3G, dogx + 100, dogy + 100);
+    if (mouseIsPressed && mouseX >= dogx + 100 && mouseX <= dogx + 200 && mouseY >= dogy + 100 && mouseY <= dogy + 200) {
+        imageSet = animation(iEar3G, dogx + 100, dogy + 100);
     }
-    animation(iEar4M, dogx+200, dogy+100);
-    if(mouseIsPressed && mouseX >= dogx+200 && mouseX <= dogx+300 && mouseY >= dogy+100 && mouseY <= dogy+200){
-        imageSet = animation(iEar4M, dogx+100, dogy+100);
+    animation(iEar4M, dogx + 200, dogy + 100);
+    if (mouseIsPressed && mouseX >= dogx + 200 && mouseX <= dogx + 300 && mouseY >= dogy + 100 && mouseY <= dogy + 200) {
+        imageSet = animation(iEar4M, dogx + 100, dogy + 100);
+        imageChange += 1;
     }
-    animation(iEar1W, dogx+300, dogy+100);
-    if(mouseIsPressed && mouseX >= dogx+300 && mouseX <= dogx+300 && mouseY >= dogy+100 && mouseY <= dogy+200){
-        imageSet = animation(iEar1W, dogx+100, dogy+100);
+    animation(iEar1W, dogx + 300, dogy + 100);
+    if (mouseIsPressed && mouseX >= dogx + 300 && mouseX <= dogx + 300 && mouseY >= dogy + 100 && mouseY <= dogy + 200) {
+        imageSet = animation(iEar1W, dogx + 100, dogy + 100);
     }
     //shepherd\\
-    animation(sEye1B, dogx, dogy+225);
-    if(mouseIsPressed && mouseX >= dogx && mouseX <= dogx+100 && mouseY >= dogy+200 && MouseY <= dogy+300){
-        imageSet = animation(sEye1B, dogx+100, dogy+100);
+    animation(sEye1B, dogx, dogy + 225);
+    if (mouseIsPressed && mouseX >= dogx && mouseX <= dogx + 100 && mouseY >= dogy + 200 && MouseY <= dogy + 300) {
+        imageSet = animation(sEye1B, dogx + 100, dogy + 100);
     }
-    animation(sEye1BL, dogx+100, dogy+225);
-    if(mouseIsPressed && mouseX >= dogx+100 && mouseX <= dogx+200 && mouseY >= dogy+200 && mouseY <= dogy+300){
-        imageSet = animation(sEye1BL, dogx+100, dogy+100);
+    animation(sEye1BL, dogx + 100, dogy + 225);
+    if (mouseIsPressed && mouseX >= dogx + 100 && mouseX <= dogx + 200 && mouseY >= dogy + 200 && mouseY <= dogy + 300) {
+        imageSet = animation(sEye1BL, dogx + 100, dogy + 100);
     }
-    animation(sEye3G, dogx+200, dogy+225);
-    if(mouseIsPressed && mouseX >= dogx+200 && mouseX <= dogx+300 && mouseY >= dogy+200 && mouseY <= dogy+300){
-        imageSet = animation(sEye3G, dogx+100, dogy+100);
+    animation(sEye3G, dogx + 200, dogy + 225);
+    if (mouseIsPressed && mouseX >= dogx + 200 && mouseX <= dogx + 300 && mouseY >= dogy + 200 && mouseY <= dogy + 300) {
+        imageSet = animation(sEye3G, dogx + 100, dogy + 100);
     }
-    animation(sEye2W, dogx+300, dogy+225);
-    if(mouseIsPressed && mouseX >= dogx+300 && mouseX <= dogx+400 && mouseY >= dogy+200 && mouseY <= dogy+300){
-        imageSet = animation(sEye2W, dogx+100, dogy+100);
+    animation(sEye2W, dogx + 300, dogy + 225);
+    if (mouseIsPressed && mouseX >= dogx + 300 && mouseX <= dogx + 400 && mouseY >= dogy + 200 && mouseY <= dogy + 300) {
+        imageSet = animation(sEye2W, dogx + 100, dogy + 100);
     }
     //pug\\
-    image(pug1, dogx-60, dogy+225, 200, 200);
-    if(mouseIsPressed && mouseX >= dogx && mouseX <= dogx+100 && mouseY >= dogy+300 && mouseY <= dogy+400){
-        imageSet = image(pug1, dogx+100, dogy+100);
+    image(pug1, dogx - 60, dogy + 225, 200, 200);
+    if (mouseIsPressed && mouseX >= dogx && mouseX <= dogx + 100 && mouseY >= dogy + 300 && mouseY <= dogy + 400) {
+        imageSet = image(pug1, dogx + 100, dogy + 100);
     }
-    image(pug2, dogx+60, dogy+225, 200, 200);
-    if(mouseIsPressed && mouseX >= dogx+100 && mouseX <= dogx+200 && mouseY >= dogy+300 && mouseY <= dogy+400){
-        imageSet = image(pug2, dogx+100, dogy+100);
+    image(pug2, dogx + 60, dogy + 225, 200, 200);
+    if (mouseIsPressed && mouseX >= dogx + 100 && mouseX <= dogx + 200 && mouseY >= dogy + 300 && mouseY <= dogy + 400) {
+        imageSet = image(pug2, dogx + 100, dogy + 100);
     }
-    image(pug6, dogx+180, dogy+225, 200, 200);
-    if(mouseIsPressed && mouseX >= dogx+200 && mouseX <= dogx+300 && mouseY >= dogy+300 && mouseY <= dogy+400){
-        imageSet = image(pug6, dogx+100, dogy+100);
+    image(pug6, dogx + 180, dogy + 225, 200, 200);
+    if (mouseIsPressed && mouseX >= dogx + 200 && mouseX <= dogx + 300 && mouseY >= dogy + 300 && mouseY <= dogy + 400) {
+        imageSet = image(pug6, dogx + 100, dogy + 100);
     }
-    image(pug7, dogx+300, dogy+225, 200, 200);
-    if(mouseIsPressed && mouseX >= dogx+300 && mouseX <= dogx+400 && mouseY >= dogy+300 && mouseY <= dogy+400){
-        imageSet = image(pug7, dogx+100, dogy+100);
+    image(pug7, dogx + 300, dogy + 225, 200, 200);
+    if (mouseIsPressed && mouseX >= dogx + 300 && mouseX <= dogx + 400 && mouseY >= dogy + 300 && mouseY <= dogy + 400) {
+        imageSet = image(pug7, dogx + 100, dogy + 100);
     }
 }
