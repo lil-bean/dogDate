@@ -193,7 +193,7 @@ function editProfile() {
     text('choose image', 100, 325);
     text('write about yourself', 550, 55);
     text('likes', 65, 430);
-    text('dislkes', 75, 630);
+    text('dislikes', 75, 630);
     imageSet;
 }
 
