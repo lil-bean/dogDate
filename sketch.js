@@ -147,16 +147,16 @@ function setup() {
 }
 
 function draw() {
-    //welcomePage();
-  //  if (makeProfile >= 1) {
-//        editProfile();
-  //  }
-    //if (makePic >= 1) {
+    welcomePage();
+    if (makeProfile >= 1) {
+        editProfile();
+    }
+    if (makePic >= 1) {
         choosePic();
-    //}
-    //if (imageChange >= 1) {
-      //  editProfile();
-//    }
+    }
+    if (imageChange >= 1) {
+        editProfile();
+    }
 }
 
 function welcomePage() {
