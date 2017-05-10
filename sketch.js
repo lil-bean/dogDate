@@ -169,6 +169,15 @@ function editProfile() {
     fill(170);
     noStroke();
     rect(picX, picY, picL, picH);
+    //spawn boxes for likes 
+    fill(200);
+    rect(120, 465, 80, 80);
+    rect(360, 465, 80, 80);
+    rect(600, 465, 80, 80);
+    //spawn boxes for dislikes
+    rect(120, 665, 80, 80);
+    rect(360, 665, 80, 80);
+    rect(600, 665, 80, 80);
     //stage change for profile picture
     if (mouseIsPressed && mouseX >= picX && mouseX <= picX + picL && mouseY >= picY && mouseY <= mouseY + picH) {
         makePic += 1;
