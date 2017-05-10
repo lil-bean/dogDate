@@ -219,8 +219,8 @@ function editProfile() {
     fill(255, 0, 220);
     textFont(Font, 24);
     textAlign(CENTER);
-    text('choose image', 100, 325);
-    text('write about yourself', 550, 55);
+    text('[name]', 100, 325);
+    text('about me', 550, 55);
     text('likes', 65, 430);
     text('dislikes', 75, 630);
     imageSet;
