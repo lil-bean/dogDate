@@ -39,6 +39,10 @@ var sEye1G, sEye2G, sEye3G, sEye4G;
 var sEye1W, sEye2W, sEye3W, sEye4W;
 //*pug*\\
 var pug1, pug2, pug3, pug4, pug5, pug6, pug7, pug8;
+//likes
+var rain, sleep, milk, squir, steak, tulip
+//dislikes
+var bath, choc, pepper, yell, spider, thunder
 //status input
 var input, button;
 //dog position
@@ -84,6 +88,20 @@ function preload() {
     pug2 = loadImage('assets/textures/dogSprites/pug2.png');
     pug6 = loadImage('assets/textures/dogSprites/pug6.png');
     pug7 = loadImage('assets/textures/dogSprites/pug7.png');
+    //likes
+    rain = loadAnimation('assets/textures/likes/likes_rain.png');
+    sleep = loadAnimation('assets/textures/likes/likes_sleeping.png');
+    milk = loadAnimation('assets/textures/likes/milk.png');
+    squir = loadAnimation('assets/textures/likes/squirrel.gif');
+    steak = loadAnimation('assets/textures/likes/steak.gif');
+    tulip = loadAnimation('assets/textures/likes/tulips.png');
+    //dislikes
+    bath = loadAnimation('assets/textures/dislikes/bath.gif');
+    choc = loadAnimation('assets/textures/dislikes/chocolate.png');
+    pepper = loadAnimation('assets/textures/dislikes/dislike_peppers.png');
+    yell = loadAnimation('assets/textures/dislikes/dislike_yelling.png');
+    spider = loadAnimation('assets/textures/dislikes/spider.png');
+    thunder = loadAnimation('assets/textures/dislikes/thunder_icon.gif');
 }
 
 function setup() {
